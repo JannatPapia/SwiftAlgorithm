@@ -88,23 +88,23 @@ var greeting = "Hello, Swift Algorithm"
 //MARK: linear search
 // liner iseach use for short/small search
 
-var arr: [Int] = [12,43,23,45,2,34]  // declare ana array
-
-var value: Int = 23 // search value
-var position: Int = -1 // suppose value in -1 position
-
-for index in 0..<arr.count { // loop terminate and search the value
-    print(index) // print array index
-    if value == arr[index] { // if value is found in array index
-        position = index + 1 // then position is increase by 1
-        break // searching value is found then loop will stop so we use break
-    }
-}
-if(position == -1) { // if value is not found in array elements that means its in -1 position
-    print("Not found") // print not found if value is not found
-} else { // otherwise
-    print("position of \(value) is : \(position)") // value is found and print value and position
-}
+//var arr: [Int] = [12,43,23,45,2,34]  // declare ana array
+//
+//var value: Int = 23 // search value
+//var position: Int = -1 // suppose value in -1 position
+//
+//for index in 0..<arr.count { // loop terminate and search the value
+//    print(index) // print array index
+//    if value == arr[index] { // if value is found in array index
+//        position = index + 1 // then position is increase by 1
+//        break // searching value is found then loop will stop so we use break
+//    }
+//}
+//if(position == -1) { // if value is not found in array elements that means its in -1 position
+//    print("Not found") // print not found if value is not found
+//} else { // otherwise
+//    print("position of \(value) is : \(position)") // value is found and print value and position
+//}
 
 
 //Another example
@@ -128,6 +128,59 @@ if(position == -1) { // if value is not found in array elements that means its i
 //}
 
 
+
+//MARK: Bianry Search
+
+var numbers = [23,43,2,3,87,44,48,90]
+
+func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
+    
+    var leftIndex = 0
+    var rightIndex = array.count - 1
+    
+    while leftIndex <= rightIndex {
+        
+        let middleIndex = (leftIndex + rightIndex) / 2
+        let middleValue = array[middleIndex]
+        
+        print("middleValue: \(middleValue), leftIndex: \(leftIndex), rightIndex: \(rightIndex), [\(array[leftIndex]), \(array[rightIndex])]")
+        
+        
+        if middleValue == searchValue {
+            return true
+        }
+        
+        if searchValue < middleValue {
+            rightIndex = middleIndex - 1
+        }
+        
+        if searchValue > middleValue {
+            leftIndex = middleIndex + 1
+        }
+        
+        
+    }
+        return false
+    }
+    print(binarySearchForSearchValue(searchValue: 40, array: numbers))
+
+//var leftIndex = 0
+//var rightIndex = numbers.count - 1
+//var searchValue: Int = 2
+//
+//while leftIndex <= rightIndex {
+//
+//    let middleIndex = (leftIndex + rightIndex) / 2
+//    let middleValue = numbers[middleIndex]
+//
+//    if middleValue == searchValue {
+//        print(true)
+//    } else {
+//        print(false)
+//    }
+//
+//
+//}
 
 
 
