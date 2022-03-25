@@ -59,20 +59,73 @@ var greeting = "Hello, Swift Algorithm"
 //print(fizzbuzz(number: 15))
 
 
-for index in 0..<30 {
-    if index % 3 == 0 {
-        print("Yes \(index) is Fizz number")
+//for index in 0..<30 {
+//    if index % 3 == 0 {
+//        print("Yes \(index) is Fizz number")
+//    }
+//    else if index % 5 == 0 {
+//        print("Yes \(index) is Buzz number")
+//    }
+//}
+
+//
+//var str: String = "switch is on and light is on"
+//var str2: String = "light is plugged in but switch off"
+//var str3: String = "switch is on but light removed"
+//
+//if str {
+//    print("switch is on and light is on")
+//}
+//else if str1 {
+//    print("light is plugged in but switch off")
+//}
+//else if str2 {
+//    print("switch is on but light removed")
+//}
+
+
+
+//MARK: linear search
+// liner iseach use for short/small search
+
+var arr: [Int] = [12,43,23,45,2,34]  // declare ana array
+
+var value: Int = 23 // search value
+var position: Int = -1 // suppose value in -1 position
+
+for index in 0..<arr.count { // loop terminate and search the value
+    print(index) // print array index
+    if value == arr[index] { // if value is found in array index
+        position = index + 1 // then position is increase by 1
+        break // searching value is found then loop will stop so we use break
     }
-    else if index % 5 == 0 {
-        print("Yes \(index) is Buzz number")
-    }
+}
+if(position == -1) { // if value is not found in array elements that means its in -1 position
+    print("Not found") // print not found if value is not found
+} else { // otherwise
+    print("position of \(value) is : \(position)") // value is found and print value and position
 }
 
 
+//Another example
 
-
-
-
+//var ar: [Int] = [12,34,43,25,2,78]
+//
+//var v = 2
+//var pos = -1
+//
+//for index in 0..<ar.count{
+//    if v == ar[index] {
+//        pos = index + 1
+//        break
+//    }
+//}
+//if(position == -1) {
+//    print("false")
+//}
+//else {
+//    print("true")
+//}
 
 
 
