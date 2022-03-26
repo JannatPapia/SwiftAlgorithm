@@ -151,7 +151,7 @@ extension String {
     func stringByRemovingVowels() -> String {
         var newWord = self
         
-  //      newWord = newWord.replacingOccurrences(of: "a", with: "") // if remove one/any letter then use 
+  //      newWord = newWord.replacingOccurrences(of: "a", with: "") // if remove one/any letter then use
         
         for vowel in ["a", "e", "i", "o", "u"] {
                 newWord = newWord.replacingOccurrences(of: vowel, with: "")
@@ -162,3 +162,32 @@ extension String {
 //replacingOccurrences(vowel, withString: "")
 //reverseWordsInSentence(sentence: sampleSentence)
  print(reverseWordsInSentence(sentence: sampleSentence))
+
+
+//MARK: Fibonacci Sequence
+
+func fibForNumSteps(numStep: Int) -> [Int] { // its return fibonacci array
+    
+    
+    var sequence: [Int] = [0, 1] //first start off this sequence with 0 no one inside of array like this and then we will actuallry return this sequence like 0,1 number
+    if numStep <= 1 {
+        return sequence
+    }
+    for _ in 0...numStep - 2 { // this for loop executed a number of steps
+        let first = sequence[sequence.count - 2] // 0
+        let second = sequence.last! //1
+        sequence.append(first + second) // first 0, second 1 // appending these numbers together and so we get 0 1 1 1
+    }
+    
+    return sequence
+}
+
+func fibRecursionForNumStep(numStep: Int, first: Int, second: Int) -> [Int] {
+    if numStep == 0 {
+    return []
+    }
+    return [first + second] + fibRecursionForNumStep(numStep: numStep - 1, first: second, second: first + second)
+}
+[0,1] + fibRecursionForNumStep(numStep: 9, first: 0, second: 1)
+
+fibForNumSteps(numStep: 10)
