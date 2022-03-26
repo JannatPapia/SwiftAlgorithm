@@ -131,38 +131,38 @@ var greeting = "Hello, Swift Algorithm"
 
 //MARK: Bianry Search
 
-var numbers = [23,43,2,3,87,44,48,90]
-
-func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
-    
-    var leftIndex = 0
-    var rightIndex = array.count - 1
-    
-    while leftIndex <= rightIndex {
-        
-        let middleIndex = (leftIndex + rightIndex) / 2
-        let middleValue = array[middleIndex]
-        
-        print("middleValue: \(middleValue), leftIndex: \(leftIndex), rightIndex: \(rightIndex), [\(array[leftIndex]), \(array[rightIndex])]")
-        
-        
-        if middleValue == searchValue {
-            return true
-        }
-        
-        if searchValue < middleValue {
-            rightIndex = middleIndex - 1
-        }
-        
-        if searchValue > middleValue {
-            leftIndex = middleIndex + 1
-        }
-        
-        
-    }
-        return false
-    }
-    print(binarySearchForSearchValue(searchValue: 40, array: numbers))
+//var numbers = [23,43,2,3,87,44,48,90]
+//
+//func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
+//
+//    var leftIndex = 0
+//    var rightIndex = array.count - 1
+//
+//    while leftIndex <= rightIndex {
+//
+//        let middleIndex = (leftIndex + rightIndex) / 2
+//        let middleValue = array[middleIndex]
+//
+//        print("middleValue: \(middleValue), leftIndex: \(leftIndex), rightIndex: \(rightIndex), [\(array[leftIndex]), \(array[rightIndex])]")
+//
+//
+//        if middleValue == searchValue {
+//            return true
+//        }
+//
+//        if searchValue < middleValue {
+//            rightIndex = middleIndex - 1
+//        }
+//
+//        if searchValue > middleValue {
+//            leftIndex = middleIndex + 1
+//        }
+//
+//
+//    }
+//        return false
+//    }
+//    print(binarySearchForSearchValue(searchValue: 40, array: numbers))
 
 //var leftIndex = 0
 //var rightIndex = numbers.count - 1
@@ -183,13 +183,75 @@ func binarySearchForSearchValue(searchValue: Int, array: [Int]) -> Bool {
 //}
 
 
+//MARK: FGactorial number
+
+//var number: Int = 12
+//var fact: Int = 1
+//
+//for i in 1...number { //
+//    fact = fact * i
+//}
+//print("Factorial number is = \(fact)")
+//
+//
+//// Implement factorial algorithm with function
+
+//func factoriaLValue(value: UInt) -> UInt { // value is UInt(unsigned integer) and return UInt.. UInt integer is a non value or non-negative
+//
+//    if value == 0 { // just check the value equals 0 like that just turn one and then you get factorial 0
+//        return 1
+//    }
+//
+//    var fact: UInt = 1
+//
+//    // use a for loop
+//    for i in 1...value {
+//        fact = fact * i // 1 * 1 = 1 loop terminate 1*2= 2 loop again terminate 2*3=6 then 6*4=24, 24*5 = 120
+//    }
+//    return fact
+//
+//
+//}
+//
+//print(factoriaLValue(value: 5)) // print factorialValue
+//print(factoriaLValue(value: 6))
+//print(factoriaLValue(value: 0)) // if value is 0 then we cant form range within less than to start basically one right here and value of the 0 coming in is not a valid way to start for them..
 
 
 
+// MARK: use recursion for factorial number
+let n: Int = 5
+var fac: Int = 1
 
+func recursiveFactorial(n: Int) -> Int {
+    
+//    if anyValue == 0 { // just check the value equals 0 like that just turn one and then you get factorial 0
+//        return 1
+//    }
+//    var fac: Int = 1
+    if n > 1 {
+//    var fact: Int = 1
+    fac = fac * n
+    recursiveFactorial(n: n - 1)
+    }
+    return fac
+    
+}
 
+recursiveFactorial(n: n)
 
-
+//
+//func recursiveFactorialOfValue(anyValue: UInt) -> UInt {
+//    
+//    if anyValue == 0 { // just check the value equals 0 like that just turn one and then you get factorial 0
+//        return 1
+//    }
+//    print(anyValue) //5
+//    return anyValue * recursiveFactorialOfValue(anyValue: anyValue - 1) //5 *
+////    return anyValue * recursiveFactorialOfValue(anyValue: anyValue - 1)
+//}
+//
+//recursiveFactorialOfValue(anyValue: 5)
 
 
 
