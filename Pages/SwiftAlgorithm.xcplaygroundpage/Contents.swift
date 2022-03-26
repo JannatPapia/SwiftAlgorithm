@@ -220,29 +220,29 @@ var greeting = "Hello, Swift Algorithm"
 
 
 // MARK: use recursion for factorial number
-let n: Int = 5
-var fac: Int = 1
-
-func recursiveFactorial(n: Int) -> Int {
-    
-//    if anyValue == 0 { // just check the value equals 0 like that just turn one and then you get factorial 0
-//        return 1
+//let n: Int = 5
+//var fac: Int = 1
+//
+//func recursiveFactorial(n: Int) -> Int {
+//
+////    if anyValue == 0 { // just check the value equals 0 like that just turn one and then you get factorial 0
+////        return 1
+////    }
+////    var fac: Int = 1
+//    if n > 1 {
+////    var fact: Int = 1
+//    fac = fac * n
+//    recursiveFactorial(n: n - 1)
 //    }
-//    var fac: Int = 1
-    if n > 1 {
-//    var fact: Int = 1
-    fac = fac * n
-    recursiveFactorial(n: n - 1)
-    }
-    return fac
-    
-}
-
-recursiveFactorial(n: n)
+//    return fac
+//
+//}
+//
+//recursiveFactorial(n: n)
 
 //
 //func recursiveFactorialOfValue(anyValue: UInt) -> UInt {
-//    
+//
 //    if anyValue == 0 { // just check the value equals 0 like that just turn one and then you get factorial 0
 //        return 1
 //    }
@@ -254,10 +254,20 @@ recursiveFactorial(n: n)
 //recursiveFactorialOfValue(anyValue: 5)
 
 
+//Sum of Natural Numbers Using Recursion
 
+var num: Int = 5
 
+func recursionAddNumber(n: Int)  -> Int {
+    if n > 1 {
+        return n + recursionAddNumber(n: n - 1)
+    }
+    else {
+        return n
+    }
+}
 
-
+recursionAddNumber(n: num)
 
 
 
