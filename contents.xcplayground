@@ -4,5 +4,6 @@
         <page name='SwiftAlgorithm'/>
         <page name='Untitled Page'/>
         <page name='commonNameInArray'/>
+        <page name='LinkedList'/>
     </pages>
 </playground>

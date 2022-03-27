@@ -1,6 +1,7 @@
 //: [Previous](@previous)
 
-import Foundation
+//import Foundation
+import UIKit
 
 var greeting = "Hello, playground"
 
@@ -196,32 +197,52 @@ var greeting = "Hello, playground"
 
 //  Wrapping an Array
 
-let tracks = ["a", "b", "c", "d", "e"]
+//let tracks = ["a", "b", "c", "d", "e"]
+//
+//let selectedTrack = "b"
+//var playlist = [String]()
+//var priorTracks = [String]()
+//
+//for track in tracks {
+//    if track == selectedTrack || playlist.count > 0 {
+//        playlist.append(track)
+//    }
+//    else {
+//        priorTracks.append(track)
+//    }
+//}
+//
+//priorTracks
+//playlist
+//
+//playlist + priorTracks
+//
+//
+//let index = tracks.index(where: {return $0 == selectedTrack})
+//let prefixArray = tracks.prefix(upTo: index!)
+//let suffixArray = tracks.suffix(from: index!)
+//
+//let arr = suffixArray + prefixArray
 
-let selectedTrack = "b"
-var playlist = [String]()
-var priorTracks = [String]()
 
-for track in tracks {
-    if track == selectedTrack || playlist.count > 0 {
-        playlist.append(track)
+//MARK: counting palindrome
+
+class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let sentence = "life is beautiful"
+        
+        allPalindromeCounts(sentence: sentence)
     }
-    else {
-        priorTracks.append(track)
+    
+    func allPalindromeCounts(sentence: String) {
+        let words = sentence.components(separatedBy: " ")
+        words.forEach { (words) in
+            print(words)
+        }
     }
 }
 
-priorTracks
-playlist
 
-playlist + priorTracks
-
-
-let index = tracks.index(where: {return $0 == selectedTrack})
-let prefixArray = tracks.prefix(upTo: index!)
-let suffixArray = tracks.suffix(from: index!)
-
-let arr = suffixArray + prefixArray
-
-
-//
